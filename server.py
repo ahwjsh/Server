@@ -58,14 +58,6 @@ def parse_data(data_string):
         print(f"Ошибка парсинга: {e}")
         return None
     
-while True:
-    message = socket.recv()
-    counter += 1
-    server_time = datetime.now().strftime("%Y:%m:%d %H:%M:%S")
-    print(f"     Время на сервере: {server_time}")
-    cursor.execute("INSERT INTO user_equipment (Lat, Lon, Alt, Timestamp) values (333, 84.5559, 51.433332, 225.0, 1233408283)") 
-    conn.commit()
-
 try:
     while True:
         # Получаем данные от Android
